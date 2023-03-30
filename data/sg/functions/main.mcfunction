@@ -70,7 +70,13 @@ execute as @a at @s if score @s death matches 1.. if score period internal match
 ## solos
 execute as @a at @s unless score teams global matches 1.. if score alive players matches ..1 if score period internal matches 1 run function sg:system/win/go
 ## teams
-## red
-execute as @a at @s if score teams global matches 1.. if score red players matches 1.. unless score blue players matches 1.. if score period internal matches 1 run function sg:system/win/red
-## blue
-execute as @a at @s if score teams global matches 1.. if score blue players matches 1.. unless score red players matches 1.. if score period internal matches 1 run function sg:system/win/blue
+# ## red
+# execute as @a at @s if score teams global matches 1.. if score red players matches 1.. unless score blue players matches 1.. if score period internal matches 1 run function sg:system/win/red
+# ## blue
+# execute as @a at @s if score teams global matches 1.. if score blue players matches 1.. unless score red players matches 1.. if score period internal matches 1 run function sg:system/win/blue
+
+## track victories 2 - please help i have no idea what im doing how do i implement this properly its 2am what the hell am i doing
+execute as @a at @s if score teams global matches 1.. if score red players matches 1.. unless score blue players matches 1.. unless score yellow players matches 1.. unless score green players matches 1.. if score period internal matches 1 run function sg:system/win/red
+execute as @a at @s if score teams global matches 1.. if score blue players matches 1.. unless score red players matches 1.. unless score yellow players matches 1.. unless score green players matches 1.. if score period internal matches 1 run function sg:system/win/blue
+execute as @a at @s if score teams global matches 1.. if score yellow players matches 1.. unless score blue players matches 1.. unless score red players matches 1.. unless score green players matches 1.. if score period internal matches 1 run function sg:system/win/yellow
+execute as @a at @s if score teams global matches 1.. if score green players matches 1.. unless score blue players matches 1.. unless score yellow players matches 1.. unless score red players matches 1.. if score period internal matches 1 run function sg:system/win/green

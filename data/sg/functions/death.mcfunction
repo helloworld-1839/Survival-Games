@@ -19,4 +19,6 @@ execute as @a at @s run playsound minecraft:entity.lightning_bolt.thunder player
 scoreboard players remove alive players 1
 execute if entity @s[team=red] run scoreboard players remove red players 1
 execute if entity @s[team=blue] run scoreboard players remove blue players 1
+execute if entity @s[team=yellow] run scoreboard players remove yellow players 1
+execute if entity @s[team=green] run scoreboard players remove green players 1
 scoreboard players reset @s death

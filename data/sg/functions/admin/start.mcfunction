@@ -13,8 +13,12 @@ execute as @a run scoreboard players add alive players 1
 ## teams
 scoreboard players reset red players
 scoreboard players reset blue players
+scoreboard players reset yellow players
+scoreboard players reset green players
 execute as @a[team=red] run scoreboard players add red players 1
 execute as @a[team=blue] run scoreboard players add blue players 1
+execute as @a[team=yellow] run scoreboard players add yellow players 1
+execute as @a[team=green] run scoreboard players add green players 1
 
 # world
 worldborder set 500 10

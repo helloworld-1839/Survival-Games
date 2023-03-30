@@ -1,5 +1,5 @@
 # SG win
-## blue
+## yellow
 
 
 scoreboard players set period internal 3
@@ -23,15 +23,15 @@ execute as @a[team=yellow] run scoreboard players operation yellow_kills interna
 execute as @a[team=green] run scoreboard players operation green_kills internal += @s kills
 
 # announce
-title @s title {"text":"GAME OVER!","color":"blue","bold":true}
-title @s subtitle [{"text":"Blue has won the game."}]
-tellraw @s ["",{"text":"[","color":"dark_gray"},{"text":"✔","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Blue","color":"blue"},{"text":" won with ","color":"green"},{"score":{"name":"blue_kills","objective":"internal"},"color":"dark_green"},{"text":" kills!","color":"green"}]
+title @s title {"text":"GAME OVER!","color":"yellow","bold":true}
+title @s subtitle [{"text":"Yellow has won the game."}]
+tellraw @s ["",{"text":"[","color":"dark_gray"},{"text":"✔","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Yellow","color":"yellow"},{"text":" won with ","color":"green"},{"score":{"name":"yellow_kills","objective":"internal"},"color":"dark_green"},{"text":" kills!","color":"green"}]
 # sfx
 playsound minecraft:ui.toast.challenge_complete player @s ~ ~ ~
 
 # effects
 effect give @s resistance 9999 255 true
-execute as @a[gamemode=adventure] at @s run summon firework_rocket ~ ~1 ~ {FireworksItem:{id:"minecraft:firework_rocket",Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:0,Trail:0,Colors:[I;2238199],FadeColors:[I;3309297]}]}}}}
+execute as @a[gamemode=adventure] at @s run summon firework_rocket ~ ~1 ~ {FireworksItem:{id:"minecraft:firework_rocket",Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:0,Trail:0,Colors:[I;14602026],FadeColors:[I;15839267]}]}}}}
 
 
 # announce

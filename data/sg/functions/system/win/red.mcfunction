@@ -6,6 +6,8 @@ scoreboard players set period internal 3
 scoreboard players reset alive players
 scoreboard players reset red players
 scoreboard players reset blue players
+scoreboard players reset yellow players
+scoreboard players reset green players
 
 # range check kills
 execute as @a unless score @s kills matches 0.. run scoreboard players set @s kills 0
@@ -13,8 +15,12 @@ execute as @a unless score @s kills matches 0.. run scoreboard players set @s ki
 # total team kills
 scoreboard players set red_kills internal 0
 scoreboard players set blue_kills internal 0
+scoreboard players set yellow_kills internal 0
+scoreboard players set green_kills internal 0
 execute as @a[team=red] run scoreboard players operation red_kills internal += @s kills
 execute as @a[team=blue] run scoreboard players operation blue_kills internal += @s kills
+execute as @a[team=yellow] run scoreboard players operation yellow_kills internal += @s kills
+execute as @a[team=green] run scoreboard players operation green_kills internal += @s kills
 
 # announce
 title @s title {"text":"GAME OVER!","color":"red","bold":true}
